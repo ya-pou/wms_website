@@ -5,6 +5,7 @@ import Services from "./components/sections/Services";
 import About from "./components/sections/About";
 import Method from "./components/sections/Method";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/layouts/Footer";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
       <About />
       <Method />
       <Contact />
+      <Footer />
     </header >
   );
 }
