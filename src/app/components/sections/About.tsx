@@ -1,9 +1,10 @@
+import ThreeBackground from "../ThreeBackground";
 import Card from "../ui/Card";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-[rgba(2,6,23,0.5)]">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="about" className="relative overflow-hidden bg-[rgba(2,6,23,0.5)]">
+      <div className="py-24 container mx-auto px-4 max-w-6xl">
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -14,7 +15,7 @@ export default function About() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 -z-100">
           {whyItems.map((item, i) => (
             <Card glass={false} key={i} padding="p-8">
               <div className="text-blue-500 mb-5">{item.icon}</div>
@@ -27,8 +28,8 @@ export default function About() {
             </Card>
           ))}
         </div>
-
       </div>
+      <ThreeBackground />
     </section>
   )
 }
