@@ -3,13 +3,14 @@ import Image from "next/image";
 import Button from "./components/ui/Button";
 import Services from "./components/sections/Services";
 import About from "./components/sections/About";
+import Method from "./components/sections/Method";
 
 export default function Home() {
   return (
     <header>
       <Navbar />
       {/* HERO GLOW */}
-      <section className="relative overflow-hidden py-16 px-6">
+      <section className="relative overflow-hidden py-24 px-6">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full hero-glow animate-pulse-smooth -z-10"></div>
         <h1 className="max-w-6xl mx-auto text-10xl md:text-6xl font-extrabold leading-tight bg-gradient-to-br from-white to-blue-500 bg-clip-text text-transparent">
           Transformez votre présence digitale <br /> avec des solutions web modernes
@@ -41,6 +42,7 @@ export default function Home() {
       </section>
       <Services />
       <About />
+      <Method />
     </header >
   );
 }
