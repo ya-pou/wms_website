@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react"
+import { startTransition, useEffect, useState } from "react"
 
 const links = [
   { href: "/", label: "Accueil" },
@@ -12,9 +12,16 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    startTransition(() => {
+      setVisible(true);
+    });
+  }, []);
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full bg-[#050507]/40 backdrop-blur-lg border-b border-white/5">
+    <div className={`navbar-anim ${visible ? " visible" : ""} fixed top-0 left-0 z-50 w-full bg-[#050507]/40 backdrop-blur-lg border-b border-white/5`} >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="text-xl font-semibold tracking-tight text-white">
@@ -44,7 +51,7 @@ export default function Navbar() {
         {/* CTA desktop / tablette */}
         <div className="hidden md:flex">
           <Link
-            href="/contact"
+            href="/#contact"
             className="rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white  shadow-lg hover:bg-blue-400 transition"
           >
             Contactez-nous
@@ -64,30 +71,32 @@ export default function Navbar() {
       </div>
 
       {/* Menu mobile */}
-      {open && (
-        <div className="md:hidden border-t border-white/10 bg-[#050507]/95">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4">
-            {links.map((link) => (
+      {
+        open && (
+          <div className="md:hidden border-t border-white/10 bg-[#050507]/95">
+            <nav className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="py-2 text-sm text-gray-100 hover:text-blue-400 transition"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+
               <Link
-                key={link.href}
-                href={link.href}
-                className="py-2 text-sm text-gray-100 hover:text-blue-400 transition"
+                href="/#contact"
+                className="mt-2 rounded-full bg-blue-500 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-blue-400 transition"
                 onClick={() => setOpen(false)}
               >
-                {link.label}
+                Contactez-nous
               </Link>
-            ))}
-
-            <Link
-              href="/contact"
-              className="mt-2 rounded-full bg-blue-500 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-blue-400 transition"
-              onClick={() => setOpen(false)}
-            >
-              Obtenir un devis
-            </Link>
-          </nav>
-        </div>
-      )}
-    </div>
+            </nav>
+          </div>
+        )
+      }
+    </div >
   )
 }

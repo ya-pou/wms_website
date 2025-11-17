@@ -28,7 +28,7 @@ export default function Method() {
       <div className="container mx-auto px-4 max-w-4xl">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl font-bold text-white mb-4">Notre méthode de travail</h2>
           <p className="text-white/60 text-lg">
             Une méthode éprouvée pour garantir votre succès
@@ -39,26 +39,18 @@ export default function Method() {
         <div className="relative">
           <div className="space-y-16">
             {steps.map((step, i) => (
-              <div key={i} className="flex gap-8 relative">
+              <div key={i} className="flex gap-8 relative fade-in">
 
                 {/* Ligne verticale */}
                 {i !== steps.length - 1 && (
                   <div
-                    className="
-                      absolute left-8 top-16 w-[2px] h-[calc(100%+16px)]
-                      bg-gradient-to-b from-blue-500 to-transparent
-                    "
+                    className="absolute left-8 top-16 w-[2px] h-[calc(100%+16px)] bg-gradient-to-b from-blue-500 to-transparent"
                   />
                 )}
 
                 {/* Numéro */}
                 <div
-                  className="
-                    w-16 h-16 rounded-full flex items-center justify-center
-                    text-white font-bold text-2xl flex-shrink-0
-                    bg-gradient-to-br from-blue-500 to-cyan-400
-                    shadow-[0_8px_24px_rgba(59,130,246,0.3)]
-                  "
+                  className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0 bg-gradient-to-br from-blue-500 to-cyan-400 shadow-[0_8px_24px_rgba(59,130,246,0.3)]"
                 >
                   {i + 1}
                 </div>

@@ -6,7 +6,7 @@ export default function Services() {
       <div className="container mx-auto px-4 max-w-6xl">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16  fade-in">
           <h2 className="text-4xl font-bold text-white mb-4">Services</h2>
           <p className="text-white/60 text-lg">
             Des solutions web complètes pour propulser votre activité vers le succès
@@ -14,15 +14,11 @@ export default function Services() {
         </div>
 
         {/* Services */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3  fade-in">
           {services.map((service, i) => (
             <Card key={i} className="text-center">
               <div
-                className="
-                  w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center
-                  bg-gradient-to-br from-blue-600 to-cyan-400
-                "
-              >
+                className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-400">
                 {service.icon}
               </div>
 

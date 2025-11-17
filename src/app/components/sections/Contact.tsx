@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="container mx-auto px-4 max-w-xl">
 
         {/* Intro */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 fade-in">
           <h2 className="text-4xl font-bold text-white mb-4">
             Prêt à démarrer votre projet ?
           </h2>
@@ -21,8 +21,7 @@ export default function Contact() {
         </div>
 
         {/* Formulaire */}
-        <div
-          className="bg-blue/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-lg shadow-black/20 hover:border-blue-500 hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+        <div className="bg-blue/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-lg shadow-black/20 hover:border-blue-500 fade-in hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
           <form className="space-y-6">
 
             {/* Nom */}

@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "./components/layouts/Navbar";
 import Image from "next/image";
 import Button from "./components/ui/Button";
@@ -6,18 +7,24 @@ import About from "./components/sections/About";
 import Method from "./components/sections/Method";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layouts/Footer";
+import useFadeInOnScroll from "./hooks/useFadeInScroll";
+
+
+
 
 export default function Home() {
+  useFadeInOnScroll();
+
   return (
     <header>
       <Navbar />
       {/* HERO GLOW */}
-      <section className="relative overflow-hidden py-24 px-6">
+      <section className="relative overflow-hidden py-24 px-6 fade-in">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full hero-glow animate-pulse-smooth -z-10"></div>
         <h1 className="max-w-6xl mx-auto text-10xl md:text-6xl font-extrabold leading-tight bg-gradient-to-br from-white to-blue-500 bg-clip-text text-transparent">
           Transformez votre présence digitale <br /> avec des solutions web modernes
         </h1>
-        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center animate-fadeInUp">
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="max-w-3xl mx-auto relative z-10">
             <p className="text-gray-300 mt-6 text-lg leading-relaxed">
               Transformez votre paysage numérique avec WebMate Services. Nous élaborons des solutions innovantes adaptées à vos besoins uniques, en stimulant la croissance et en maximisant votre impact en ligne. Construisons le succès ensemble !

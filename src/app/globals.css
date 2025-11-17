@@ -29,6 +29,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Navbar */
+.navbar-anim {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+.navbar-anim.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* Background gradient */
 .bg-gradient-main {
   background: linear-gradient(135deg, #0a0c10 0%, #0f1218 50%, #1e293b 100%);
@@ -64,6 +76,17 @@ body {
   animation: pulse 4s ease-in-out infinite;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Fade In Up */
 @keyframes fadeInUp {
   from {
@@ -80,7 +103,7 @@ body {
   animation: fadeInUp 0.8s ease-out both;
 }
 
-/* Test particles */
+/* Particles */
 .logo-wrapper {
   position: relative;
   width: 400px;
@@ -178,3 +201,4 @@ body {
   50%  { transform: rotate(-180deg) scale(1.05); }
   100% { transform: rotate(-360deg) scale(1); }
 }
+

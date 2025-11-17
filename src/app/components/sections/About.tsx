@@ -9,7 +9,7 @@ export default function About() {
       <div className="py-24 container mx-auto px-4 max-w-6xl">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl font-bold text-white mb-4">Libérez votre potentiel numérique</h2>
           <p className="text-white/60 text-lg m-auto max-w-xl">
             WebMate Services fournit des solutions de pointes adaptées à vos besoins uniques, garantissant que votre présence en ligne se démarque et génère des résultats tangibles.
@@ -17,7 +17,7 @@ export default function About() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 -z-100">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 -z-100 fade-in">
           {whyItems.map((item, i) => (
             <Card glass={false} key={i} padding="p-8">
               <div className="text-blue-500 mb-5">{item.icon}</div>
