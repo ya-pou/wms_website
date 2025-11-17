@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-24 bg-[rgba(2,6,23,0.8)]">
       <div className="container mx-auto px-4 max-w-xl">
 
         {/* Intro */}
@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
 
             {/* Bouton */}
-            <Button variant="primary" type="submit" className="w-full">
+            <Button variant="primary" type="submit" className="w-full cursor-pointer">
               Envoyer ma demande
             </Button>
           </form>
