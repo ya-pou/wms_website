@@ -29,7 +29,7 @@ export default function Method() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Mon processus de travail</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Notre méthode de travail</h2>
           <p className="text-white/60 text-lg">
             Une méthode éprouvée pour garantir votre succès
           </p>

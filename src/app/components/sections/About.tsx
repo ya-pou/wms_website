@@ -1,4 +1,6 @@
-import ThreeBackground from "../ThreeBackground";
+import dynamic from "next/dynamic";
+
+const ThreeBackground = dynamic(() => import("../ThreeBackground"))
 import Card from "../ui/Card";
 
 export default function About() {

@@ -4,6 +4,7 @@ import Button from "./components/ui/Button";
 import Services from "./components/sections/Services";
 import About from "./components/sections/About";
 import Method from "./components/sections/Method";
+import Contact from "./components/sections/Contact";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <Services />
       <About />
       <Method />
+      <Contact />
     </header >
   );
 }
