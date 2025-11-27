@@ -20,7 +20,7 @@ export default function PortfolioFilters({ onFilterChange }: PortfolioFiltersPro
             setActive(t);
             onFilterChange(t);
           }}
-          className={`px-5 py-2 rounded-full text-sm font-semibold transition-all z-99
+          className={`px-5 py-2 rounded-full text-sm font-semibold transition-all z-50
             ${active === t
               ? "bg-blue-600 text-white shadow-lg"
               : "bg-white/10 text-white/60 border border-white/10 hover:bg-white/20"
