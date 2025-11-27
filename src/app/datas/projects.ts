@@ -1,4 +1,15 @@
-export const projects = [
+export interface ProjectType {
+  id: string;
+  title: string;
+  type: string;
+  short_description: string;
+  description: string;
+  image: string;
+  link?: string;
+  stacks: string[];
+}
+
+export const projects: ProjectType[] = [
   {
     id: 'amtras',
     title: 'Amiens Travel Services',
@@ -24,7 +35,7 @@ export const projects = [
     title: "Light CRM",
     type: "Application web",
     description: "Mini-CRM complet Angular + NestJS",
-    stack: ["Angular", "NestJS", "MySQL"],
+    stacks: ["Angular", "NestJS", "MySQL"],
     short_description: "Mini-CRM sur mesure développé avec Angular & NestJS.",
     image: '/lightcrm.webp',
   },
@@ -34,7 +45,7 @@ export const projects = [
     type: 'Site vitrine',
     short_description: 'Site institutionnel avec blog interne pour une holding dans le secteur de la santé.',
     description: '',
-    image: '',
+    image: '/liseme.webp',
     link: '',
     stacks: ['Wordpress', 'ACF', 'PHP']
   }

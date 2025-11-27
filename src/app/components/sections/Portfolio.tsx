@@ -23,9 +23,7 @@ export default function Portfolio() {
         {previewProjects.map((project) => (
           <div
             key={project.id}
-            className="relative group rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg shadow-black/20       hover:-translate-y-2
-      hover:border-blue-500
-      hover:shadow-blue-500/30"
+            className="relative group rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg shadow-black/20 hover:-translate-y-2 hover:border-blue-500 hover:shadow-blue-500/30"
           >
 
             {/* IMAGE */}
