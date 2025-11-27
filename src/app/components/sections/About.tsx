@@ -38,9 +38,9 @@ export default function About() {
 
 const whyItems = [
   {
-    title: "Transparence totale",
+    title: "Transparence",
     text:
-      "Communication claire à chaque étape du projet. Vous savez toujours où nous en sommes et ce qui se passe.",
+      "Communication claire à chaque étape du projet. Vous savez exactement ce qui est fait et pourquoi.",
     icon: (
       <svg
         className="w-12 h-12"
@@ -56,9 +56,9 @@ const whyItems = [
     ),
   },
   {
-    title: "Code maintenable",
+    title: "Code propre & maintenable",
     text:
-      "Développement propre et documenté avec les meilleures pratiques. Votre projet évolue facilement dans le temps.",
+      "Développement structuré, documenté et évolutif. Vous pouvez faire évoluer votre projet sans coûts cachés.",
     icon: (
       <svg
         className="w-12 h-12"
@@ -75,7 +75,7 @@ const whyItems = [
   {
     title: "Communication fluide",
     text:
-      "Réponse rapide et écoute active de vos besoins. Nous travaillons ensemble pour atteindre vos objectifs.",
+      "Écoute, réactivité et conseils personnalisés. Vous avez un interlocuteur unique.",
     icon: (
       <svg
         className="w-12 h-12"
@@ -94,7 +94,7 @@ const whyItems = [
   {
     title: "Respect des délais",
     text:
-      "Livraison dans les temps convenus. Votre projet avance selon le planning établi ensemble.",
+      "Planification précise et livraisons dans les temps. Pas de surprises.",
     icon: (
       <svg
         className="w-12 h-12"

@@ -1,3 +1,4 @@
+import Button from "../ui/Button";
 import Card from "../ui/Card";
 
 export default function Services() {
@@ -16,7 +17,7 @@ export default function Services() {
         {/* Services */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3  fade-in">
           {services.map((service, i) => (
-            <Card key={i} className="text-center">
+            <Card key={i} className="text-center flex flex-col items-stretch justify-between">
               <div
                 className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-400">
                 {service.icon}
@@ -29,6 +30,7 @@ export default function Services() {
               <p className="text-white/60 leading-relaxed mb-6">
                 {service.text}
               </p>
+              <Button href="/#contact">Demander un devis</Button>
             </Card>
           ))}
         </div>
@@ -39,9 +41,9 @@ export default function Services() {
 
 const services = [
   {
-    title: "Sites Vitrines Modernes",
+    title: "Sites vitrines modernes & performants",
     text:
-      "Création et refonte de sites web rapides, responsives et optimisés pour le référencement. Design moderne qui convertit vos visiteurs en clients.",
+      "Création et refonte de sites professionnels, rapides et optimisés. Design soigné, contenu clair, SEO de base, responsive, et orienté conversion. Idéal pour renforcer votre crédibilité et attirer des clients.",
     icon: (
       <svg
         width="32"
@@ -58,9 +60,9 @@ const services = [
     ),
   },
   {
-    title: "Automatisation Métier",
+    title: "Outils internes & automatisations métier",
     text:
-      "Générateurs de devis, connecteurs API, workflows automatisés et outils personnalisés pour optimiser vos processus et gagner un temps précieux.",
+      "Développement de CRM / ERP, générateur de devis,portails internes, connecteurs API,workflows automatisés et dashboards métier. Des solutions sur mesure pour gagner du temps, structurer vos processus et remplacer les fichiers Excel.",
     icon: (
       <svg
         width="32"
@@ -75,9 +77,9 @@ const services = [
     ),
   },
   {
-    title: "Dashboards & Data Visualisation",
+    title: "Maintenance & accompagnement",
     text:
-      "Tableaux de bord interactifs et visualisations de données pour piloter votre activité avec des métriques claires et actionnables.",
+      "Support technique, mises à jour, corrections, sécurité et évolutions continues. Un accompagnement fiable pour faire évoluer votre site ou vos outils en toute sérénité.",
     icon: (
       <svg
         width="32"

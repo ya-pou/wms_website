@@ -10,14 +10,13 @@ export default function Contact() {
         {/* Intro */}
         <div className="text-center mb-12 fade-in">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Prêt à démarrer votre projet ?
+            Prêt à lancer votre projet ?
           </h2>
           <h3 className="text-2xl text-white mb-3">
             Réponse garantie sous 24h
           </h3>
           <p className="text-white/60">
-            Décrivez-moi votre projet et je vous recontacte rapidement pour en discuter ensemble.
-          </p>
+            Expliquez-moi vos besoins en quelques lignes : je vous accompagne pour trouver la meilleure solution pour votre activité.          </p>
         </div>
 
         {/* Formulaire */}
