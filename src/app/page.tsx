@@ -8,6 +8,7 @@ import Method from "./components/sections/Method";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layouts/Footer";
 import useFadeInOnScroll from "./hooks/useFadeInScroll";
+import Portfolio from "./components/sections/Portfolio";
 
 
 
@@ -50,6 +51,7 @@ export default function Home() {
         </div>
       </section>
       <Services />
+      <Portfolio />
       <About />
       <Method />
       <Contact />

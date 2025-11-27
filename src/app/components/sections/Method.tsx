@@ -4,12 +4,12 @@ export default function Method() {
     {
       title: "Découverte & Analyse",
       text:
-        "Appel gratuit pour comprendre vos besoins, vos objectifs et les défis de votre activité. J'analyse votre contexte pour proposer la meilleure solution."
+        "Appel gratuit pour comprendre votre activité, vos besoins et vos objectifs. Je vous donne une vision claire de ce qui est possible."
     },
     {
       title: "Proposition & Devis",
       text:
-        "Je vous présente une solution sur mesure avec un devis détaillé et transparent. Nous validons ensemble le périmètre et le planning du projet."
+        "Vous recevez une solution personnalisée, transparente et adaptée à votre budget. Nous validons ensemble le périmètre et le planning."
     },
     {
       title: "Développement",
