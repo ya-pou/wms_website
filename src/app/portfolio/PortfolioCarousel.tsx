@@ -134,17 +134,17 @@ export default function PortfolioCarousel({ filteredProjects }: PortfolioCarouse
             {/* CARD FULLSCREEN */}
             <div
               className={`
-              w-[90%] max-w-5xl h-[80vh] z-[1000]
+              w-[95%] max-w-5xl h-[85vh] z-[1000]
               bg-black/50 backdrop-blur-lg border border-white/10 rounded-2xl
               shadow-2xl overflow-hidden
-              flex animate-grow
+              flex animate-grow relative
             `}
             >
               {/* LEFT IMAGE */}
-              <div className="w-2/3 relative hidden md:block">
+              <div className="w-full md:w-1/3hidden md:block">
                 <Image
                   src={openProject.image}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   alt={openProject.title}
                   width={1000}
                   height={500}
@@ -152,7 +152,7 @@ export default function PortfolioCarousel({ filteredProjects }: PortfolioCarouse
               </div>
 
               {/* RIGHT CONTENT */}
-              <div className="w-full md:w-1/3 p-8 overflow-y-auto">
+              <div className="w-full md:w-2/3 p-8 overflow-y-auto">
                 <h2 className="text-3xl font-bold text-white mb-3">
                   {openProject.title}
                 </h2>
@@ -160,6 +160,10 @@ export default function PortfolioCarousel({ filteredProjects }: PortfolioCarouse
                 <p className="text-blue-400 font-semibold mb-6 uppercase tracking-wide">
                   {openProject.type}
                 </p>
+
+                {openProject.link ? (
+                  <p className="text-blue-300 mb-2"><a href={`${openProject.link}`} target="_blank" rel="noopener noreferrer">Voir le site</a></p>
+                ) : ''}
 
                 <p className="text-white/70 leading-relaxed mb-6">
                   {openProject.description}
@@ -179,10 +183,10 @@ export default function PortfolioCarousel({ filteredProjects }: PortfolioCarouse
 
                 {/* BUTTONS */}
                 <button
-                  className="mt-6 px-6 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-500 cursor-pointer"
+                  className="px-4 py-2 absolute top-0 right-0 rounded-xl bg-white text-black hover:bg-blue-500/40 cursor-pointer hover:text-white"
                   onClick={() => setOpenProject(null)}
                 >
-                  Fermer
+                  X
                 </button>
 
               </div>
