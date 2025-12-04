@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../ui/Button"
 
 export default function Footer() {
@@ -20,10 +21,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-5 text-lg">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-white/60 hover:text-blue-400 transition">Sites vitrines</a></li>
-              <li><a href="#services" className="text-white/60 hover:text-blue-400 transition">Automatisation métier</a></li>
-              <li><a href="#services" className="text-white/60 hover:text-blue-400 transition">Dashboards</a></li>
-              <li><a href="#services" className="text-white/60 hover:text-blue-400 transition">Maintenance & support</a></li>
+              <li><Link href="/#services" className="text-white/60 hover:text-blue-400 transition">Sites vitrines</Link></li>
+              <li><Link href="/#services" className="text-white/60 hover:text-blue-400 transition">Automatisation métier</Link></li>
+              <li><Link href="/#services" className="text-white/60 hover:text-blue-400 transition">Maintenance & support</Link></li>
+              <li><Link href="/portfolio" className="text-white/60 hover:text-blue-400 transition">Portfolio</Link></li>
             </ul>
           </div>
 
@@ -32,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><a href="mailto:contact@webmate-services.com" className="text-white/60 hover:text-blue-400 transition">contact@webmate-services.com</a></li>
               <li><a href="tel:0749127483" className="text-white/60 hover:text-blue-400 transition">Téléphone : 07.49.12.74.83</a></li>
-              <li className="mt-6"><Button href="#contact" >Nous contacter</Button></li>
+              <li className="mt-6"><Button href="/#contact" >Nous contacter</Button></li>
             </ul>
           </div>
         </div>
@@ -41,8 +42,8 @@ export default function Footer() {
         <div className="text-center border-t border-white/10 pt-6 text-white/60 text-sm">
           <p>
             &copy; 2025 WebMate Services. Tous droits réservés. |
-            <a href="#" className="ml-2 text-white/60 hover:text-blue-400 transition">Mentions légales</a> |
-            <a href="#" className="ml-2 text-white/60 hover:text-blue-400 transition">Politique de confidentialité</a>
+            <Link href="/mentions-legales" className="ml-2 text-white/60 hover:text-blue-400 transition">Mentions légales</Link> |
+            <Link href="/cgv" className="ml-2 text-white/60 hover:text-blue-400 transition">CGV</Link>
           </p>
         </div>
       </div>
