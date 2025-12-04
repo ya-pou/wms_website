@@ -8,6 +8,7 @@ const links = [
   { href: "/#services", label: "Services" },
   { href: "/#about", label: "À propos" },
   { href: "/#methode", label: "Méthode" },
+  { href: "/portfolio", label: "Portfolio" },
 ]
 
 export default function Navbar() {
@@ -29,7 +30,7 @@ export default function Navbar() {
         </Link>
 
         {/* Centre : pill nav (desktop / tablette) */}
-        <nav className="hidden md:flex items-center justify-center flex-1">
+        <nav className="hidden lg:flex items-center justify-center flex-1">
           <div className="relative group rounded-full border border-white/10 bg-black/40 px-10 py-3 z-10 hover:bg-black">
             {/* Glow */}
             <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-70 transition duration-300 blur-lg bg-blue-500/40"></div>
@@ -49,7 +50,7 @@ export default function Navbar() {
         </nav>
 
         {/* CTA desktop / tablette */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <Link
             href="/#contact"
             className="rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white  shadow-lg hover:bg-blue-400 transition"
@@ -60,7 +61,7 @@ export default function Navbar() {
 
         {/* Burger mobile */}
         <button
-          className="md:hidden inline-flex flex-col gap-[4px] p-2"
+          className="lg:hidden inline-flex flex-col gap-[4px] p-2"
           onClick={() => setOpen((o) => !o)}
           aria-label="Ouvrir le menu"
         >
@@ -73,7 +74,7 @@ export default function Navbar() {
       {/* Menu mobile */}
       {
         open && (
-          <div className="md:hidden border-t border-white/10 bg-[#050507]/95">
+          <div className="lg:hidden border-t border-white/10 bg-[#050507]/95">
             <nav className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4">
               {links.map((link) => (
                 <Link
