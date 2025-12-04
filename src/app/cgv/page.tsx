@@ -1,6 +1,9 @@
 import Footer from "../components/layouts/Footer";
 import Navbar from "../components/layouts/Navbar";
-
+export const metadata = {
+  title: "CGV",
+  description: "Conditions générales de vente de prestations de services entre professionnels sur internet"
+};
 export default function Cgv() {
   return (
     <>

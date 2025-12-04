@@ -10,9 +10,6 @@ import Footer from "./components/layouts/Footer";
 import useFadeInOnScroll from "./hooks/useFadeInScroll";
 import Portfolio from "./components/sections/Portfolio";
 
-
-
-
 export default function Home() {
   useFadeInOnScroll();
 
