@@ -6,7 +6,7 @@ import Card from "../ui/Card";
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden bg-[rgba(2,6,23,0.5)]">
-      <div className="py-24 container mx-auto px-4 max-w-6xl">
+      <div className="md:py-24 py-6 container mx-auto px-4 max-w-6xl">
 
         {/* Header */}
         <div className="text-center mb-16 fade-in">

@@ -18,9 +18,9 @@ export default function Home() {
       <header>
         <Navbar />
         {/* HERO GLOW */}
-        <section className="relative overflow-hidden py-24 px-6 fade-in">
+        <section className="relative overflow-hidden md:py-24 py-6 px-6 fade-in">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full hero-glow animate-pulse-smooth -z-10"></div>
-          <h1 className="max-w-6xl mx-auto text-10xl md:text-6xl font-extrabold leading-tight bg-gradient-to-br from-white to-blue-500 bg-clip-text text-transparent">
+          <h1 className="max-w-6xl mx-auto text-10xl md:text-6xl text-4xl font-extrabold leading-tight bg-gradient-to-br from-white to-blue-500 bg-clip-text text-transparent">
             Des sites performants & des outils internes sur mesure.
           </h1>
           <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">

@@ -7,7 +7,7 @@ export default function Portfolio() {
   const previewProjects = projects.slice(0, 3);
 
   return (
-    <section id="portfolio" className="py-24">
+    <section id="portfolio" className="md:py-24 py-6">
       <div className="container mx-auto px-4 max-w-4xl"></div>
 
       {/* Header */}

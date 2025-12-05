@@ -24,7 +24,7 @@ export default function Method() {
   ];
 
   return (
-    <section id="methode" className="py-24">
+    <section id="methode" className="md:py-24 py-6">
       <div className="container mx-auto px-4 max-w-4xl">
 
         {/* Header */}

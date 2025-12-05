@@ -3,7 +3,7 @@ import Card from "../ui/Card";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24">
+    <section id="services" className="md:py-24 py-6">
       <div className="container mx-auto px-4 max-w-6xl">
 
         {/* Header */}
