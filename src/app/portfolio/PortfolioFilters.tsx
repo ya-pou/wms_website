@@ -12,7 +12,7 @@ export default function PortfolioFilters({ onFilterChange }: PortfolioFiltersPro
   const [active, setActive] = useState("Tous");
 
   return (
-    <div className="flex flex-wrap gap-4 justify-center mb-16">
+    <div className="hidden md:flex flex-wrap gap-4 justify-center mb-16">
       {types.map((t) => (
         <button
           key={t}

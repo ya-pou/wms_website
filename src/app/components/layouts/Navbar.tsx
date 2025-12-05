@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`navbar-anim ${visible ? " visible" : ""} fixed top-0 left-0 z-50 w-full bg-[#050507]/40 backdrop-blur-lg border-b border-white/5`} >
+    <div className={`navbar-anim ${visible ? " visible" : ""} fixed top-0 left-0 z-50 w-full bg-[#050507]/40 backdrop-blur-lg border-b border-white/5 z-99`} >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="text-xl font-semibold tracking-tight text-white">
@@ -74,13 +74,13 @@ export default function Navbar() {
       {/* Menu mobile */}
       {
         open && (
-          <div className="lg:hidden border-t border-white/10 bg-[#050507]/95">
-            <nav className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4">
+          <div className="lg:hidden border-t border-white/10 bg-[#050507]/95 z-99">
+            <nav className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 z-99">
               {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="py-2 text-sm text-gray-100 hover:text-blue-400 transition"
+                  className="py-2 text-sm text-gray-100 hover:text-blue-400 transition z-99"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
