@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "WebMate Services - Accueil",
-  description: "Agence web à Amiens : création de sites vitrines, outils métier et automatisations pour PME. WebMate Services développe des solutions performantes et sur mesure."
+  description: "Agence web à Amiens : création de sites vitrines, outils métier et automatisations pour PME. WebMate Services développe des solutions performantes et sur mesure.",
+  other: {
+    "link:preload": "/logo-wms.svg",
+  },
 };
 
 export default function RootLayout({
