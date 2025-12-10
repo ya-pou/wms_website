@@ -1,32 +1,43 @@
 "use client";
 
+import { useState } from "react";
 import Button from "../ui/Button";
 
 export default function Contact() {
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus(null);
 
     const form = e.currentTarget;
 
-    const data = {
+    const payload = {
       name: form.firstName.value,
       email: form.email.value,
-      message: form.message.value,
+      message: form.message.value
     };
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    const json = await res.json();
+      const json = await res.json();
 
-    if (json.success) {
-      alert("Message envoyé !");
-    } else {
-      alert("Erreur");
+      if (json.success) {
+        setStatus("success");
+        form.reset(); // vide le formulaire 🎉
+      } else {
+        setStatus("error");
+      }
+    } catch (err: unknown) {
+      console.log(err);
+      setStatus("error");
     }
   };
 
@@ -94,8 +105,19 @@ export default function Contact() {
 
             {/* Bouton */}
             <Button variant="primary" type="submit" className="w-full cursor-pointer">
-              Envoyer ma demande
+              {loading ? "Envoi..." : "Envoyer ma demande"}
             </Button>
+            {status === "success" && (
+              <div className="mt-4 p-3 rounded-lg bg-green-500/20 text-green-300 border border-green-500/40">
+                🎉 Message envoyé avec succès ! Je vous répondrai sous 24h.
+              </div>
+            )}
+
+            {status === "error" && (
+              <div className="mt-4 p-3 rounded-lg bg-red-500/20 text-red-300 border border-red-500/40">
+                ❌ Une erreur est survenue. Merci de réessayer plus tard.
+              </div>
+            )}
           </form>
         </div>
       </div>
