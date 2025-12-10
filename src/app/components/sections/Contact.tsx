@@ -3,6 +3,33 @@
 import Button from "../ui/Button";
 
 export default function Contact() {
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const data = {
+      name: form.firstName.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+
+    if (json.success) {
+      alert("Message envoyé !");
+    } else {
+      alert("Erreur");
+    }
+  };
+
   return (
     <section id="contact" className="md:py-24 py-6 bg-[rgba(2,6,23,0.8)]">
       <div className="container mx-auto px-4 max-w-xl">
@@ -21,7 +48,7 @@ export default function Contact() {
 
         {/* Formulaire */}
         <div className="bg-blue/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-lg shadow-black/20 hover:border-blue-500 fade-in hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
 
             {/* Nom */}
             <div className="flex flex-col">
@@ -30,7 +57,7 @@ export default function Contact() {
               </label>
               <input
                 id="name"
-                name="name"
+                name="firstName"
                 type="text"
                 required
                 placeholder="Votre nom"
